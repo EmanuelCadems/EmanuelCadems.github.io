@@ -14,17 +14,20 @@
       const valid_codes = ['1722684851796783951', '2523933704732486556', '4164445150582674672'];
       console.log(valid_codes);
       console.log(valid_codes.includes(code));
+      
 
       if (valid_codes.includes(code)) {
+        document.getElementById("answer").textContent += " Si";
         alert("Si es un vecino");
       } else {
         alert("No es un vecino");
+        document.getElementById("answer").textContent += " No";
       }
     }
   </script>
 </head>
 <body onload="verify()">
   <p> ¿es vecino de la misión? </p>
-  <p> <strong>Si</strong> </p>
+  <p> <strong id="answer"></strong> </p>
 </body>
 </html>
